@@ -2,11 +2,11 @@
 const categorias = ["Celulares", "Smartwatches", "Auriculares", "Memorias"]
 console.log('Categorias: ' + categorias.join('-') )
 
-/* Array de medios de pago */
+/* Array de medios de pago, por ahora no los uso */
 const mediosDePago = ["transferencia", "contra entrega", "paypal", "rapipago"]
 console.log('Medios de pago: ' + mediosDePago.join('-') )
 
-/* Array de medios de pago */
+/* Array de formas de envío, por ahora no las uso */
 const formasDeEnvio = ["retiro en local", "Oca", "Correo Argentino"]
 console.log('Formas de envío: ' + formasDeEnvio.join('-') )
 
@@ -109,16 +109,16 @@ function verProductos(categoria = '') {
 }
 
 // Catálogo completo:
-verProductos(); 
+verProductos()
 
 // Filtro por categoria:
-verProductos('Auriculares'); 
+verProductos('Auriculares')
 
 
 // Agregar producto al carrito:
 function agregarProducto(producto, cantidad = 1) {
 
- const index = carrito.findIndex(item => item.nombre === producto.nombre);
+    const index = carrito.findIndex(item => item.nombre === producto.nombre)
 
     if (index === -1) {
 
@@ -127,40 +127,40 @@ function agregarProducto(producto, cantidad = 1) {
             nombre: producto.nombre,
             precio: producto.precio,
             cantidad: cantidad
-        });
+        })
 
-        console.log('Se agrega ' + producto.nombre + ' Cant: ' + cantidad);
+        console.log('Se agrega ' + producto.nombre + ' Cant: ' + cantidad)
 
     } else {
-        alert('Ese producto ya está en tu carrito, por lo tanto no se puede agregar.');
-        console.log('El producto ya está en el carrito, no se agrega.');    
+        alert('Ese producto ya está en tu carrito, por lo tanto no se puede agregar.')
+        console.log('El producto ya está en el carrito, no se agrega.')
     }
 
 }
 
 
 function vaciarCarrito() {
-    let confirma = confirm('Desea vaciar el carrito?');
+    let confirma = confirm('Desea vaciar el carrito?')
     if (confirma) {
         carrito = []
-        console.log('Se vacía carrito');    
+        console.log('Se vacía carrito')
     } else {
-        console.log('No se vacía carrito');          
+        console.log('No se vacía carrito')
     }
 }
 
 function verCarrito() {
-    console.log('Carrito de compra: ');        
+    console.log('Carrito de compra: ')     
     for (let i = 0; i < carrito.length; i++) {
-        console.log(carrito[i]);
+        console.log(carrito[i])
     }   
     console.log('Total: $' + totalCarrito())
 }
 
 function quitarProducto(id) {
-    const index = carrito.findIndex(producto => producto.id === id);
-    const elemento = carrito.splice(index, 1);
-    console.log('Se quita ' + elemento[0].nombre + ' del carrito.');
+    const index = carrito.findIndex(producto => producto.id === id)
+    const elemento = carrito.splice(index, 1)
+    console.log('Se quita ' + elemento[0].nombre + ' del carrito.')
 }
 
 function totalCarrito() {
@@ -168,27 +168,38 @@ function totalCarrito() {
     for (let i = 0; i < carrito.length; i++) {
         $total = $total + (carrito[i].cantidad * carrito[i].precio)
     }   
-    return $total
+    return $total.toFixed(2)
 }
 
 function generarOrden() {
-    const nombre = prompt('Ingrese su nombre:');
-    const email = prompt('Ingrese su email:');
-    const domicilio = prompt('Ingrese su domicilio:');
+    let nombre = ''
+    let email = ''
+    let domicilio = ''
 
-    if (!nombre || !email || !domicilio) {
-        alert('Los campos son obligatorios.');        
-        console.log('Debe ingresar sus datos.');
-        return;
+    while (nombre === null || nombre ==='') {
+        nombre = prompt('Ingrese su nombre:')
+    }
+    while (email === null || email ==='') {
+        email = prompt('Ingrese su email:')
+    }
+    while (domicilio === null || domicilio ==='') {
+        domicilio = prompt('Ingrese su domicilio:')
     }
 
-    console.log("Orden de compra generada:");       
-    console.log("Nombre: " + nombre);
-    console.log("Email: " + email);
-    console.log("Domicilio: " + domicilio);
+
+    if (!nombre || !email || !domicilio) {
+        alert('Los campos son obligatorios.') 
+        console.log('Debe ingresar sus datos.')
+        return
+    }
+
+    console.log('Orden de compra generada:')       
+    console.log('Nombre: ' + nombre)
+    console.log('Email: ' + email)
+    console.log('Domicilio: ' + domicilio)
 
     for (let i = 0; i < carrito.length; i++) {
-        console.log(carrito[i]);
+        console.log(carrito[i])
     }   
     console.log('Total compra: $' + totalCarrito())
 }
