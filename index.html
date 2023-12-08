@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecommerce Javascript</title>
+</head>
+<body>
+    <h1>Bienvenidos</h1>
+    <p>Ecommerce javascript.</p>
+    <p>Simulación de funciones:</p>
+    <button onclick="verProductos()">Ver catálogo</button>
+    <button onclick="verProductos('Smartwatches')">Ver categoría Smartwatches</button>
+    <br></br>
+    <button onclick="agregarProducto(catalogo[0],2)">Agregar producto 1 al carrito</button>
+    <button onclick="agregarProducto(catalogo[1],5)">Agregar producto 2 al carrito</button>
+    <br></br>
+    <button onclick="quitarProducto(1)">Quitar producto 1 del carrito</button>
+    <button onclick="quitarProducto(2)">Quitar producto 2 del carrito</button>
+    <br></br>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button onclick="verCarrito()">Ver carrito</button>
+    <br></br>
+    <button onclick="generarOrden()">Confirmar compra</button>
+    <script src="app.js"></script>
+</body>
+</html>
