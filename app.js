@@ -327,6 +327,7 @@ function quitarProducto(id) {
     const elemento = carrito.splice(index, 1)
     //console.log('Se quita ' + elemento[0].nombre + ' del carrito.')
     mostrarCarrito()
+    guardarCarrito()
 }
 
 function totalCarrito() {
