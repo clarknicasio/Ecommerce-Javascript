@@ -1,0 +1,70 @@
+body {
+    font-family: "Share Tech", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+main {
+    padding: 20px;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-eliminar {
+    background: none;  /* Elimina el fondo del botón */
+    border: none;  /* Elimina el borde del botón */
+    color: red;  /* Color de la "X" */
+    margin-top: -16px;
+    font-weight: 600;
+    /*cursor: pointer;  /* Cambia el cursor al pasar el ratón */
+}

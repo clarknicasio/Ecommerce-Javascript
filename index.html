@@ -1,26 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Ecommerce Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Bienvenidos</h1>
-    <p>Ecommerce javascript.</p>
-    <p>Simulación de funciones:</p>
-    <button onclick="verProductos()">Ver catálogo</button>
-    <button onclick="verProductos('Smartwatches')">Ver categoría Smartwatches</button>
-    <br></br>
-    <button onclick="agregarProducto(catalogo[0],2)">Agregar producto 1 al carrito</button>
-    <button onclick="agregarProducto(catalogo[1],5)">Agregar producto 2 al carrito</button>
-    <br></br>
-    <button onclick="quitarProducto(1)">Quitar producto 1 del carrito</button>
-    <button onclick="quitarProducto(2)">Quitar producto 2 del carrito</button>
-    <br></br>
-    <button onclick="vaciarCarrito()">Vaciar carrito</button>
-    <button onclick="verCarrito()">Ver carrito</button>
-    <br></br>
-    <button onclick="generarOrden()">Confirmar compra</button>
+
+    <header>
+        <h1>Tienda Online JS</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button class="btn" onclick="verProductos()">Ver catálogo</button></li>
+            <li><button class="btn" onclick="verProductos('Celulares')">Celulares</button></li>
+            <li><button class="btn" onclick="verProductos('Auriculares')">Auriculares</button></li>
+            <li><button class="btn" onclick="verProductos('Memorias')">Memorias</button></li>
+            <li><button class="btn" onclick="verProductos('Smartwatches')">Smartwatches</button></li>
+        </ul>
+        <div>
+            <!--<a href="#">Carrito</a>-->
+        </div>
+    </nav>
+
+    <main>
+        <aside>
+            <h4>Carrito</h4>
+            <div id="containerCarrito">
+            </div>         
+            <div id="lblTotal">
+            </div>               
+            <button type="button" class="btn btn-primary btn-sm" onclick="vaciarCarrito()">Vaciar carrito</button>    
+        </aside>
+
+        <section>
+            <h3 id="titleItems" class="mt-2 mb-4">Hacé clic en los items del menú para navegar el catálogo.</h3>
+        </section>
+
+        <div class="row" id="containerItems">
+
+        </div>
+
+
+        <div id="itemDetalle" style="display: none;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="detalleTitle"></h2>
+                </div>
+                <div class="col-md-6">
+                    <img id="imgProducto" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h4>Información técnica</h4>
+                    <p id="detalleDescripcion"></p>
+                    <h4>Precio</h4>
+                    <p id="precioProducto"></p>
+                    <h4>Stock</h4>
+                    <p id="stockProducto"></p>
+
+                    <h4>Cantidad</h4>
+                    <input type="number" class="mb-3" id="cantidad" value="1" min="1">
+
+                    <div id="detalleButtons">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="volverAProductos()">Volver al catálogo</button>                        
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="mb-0">&copy; 2024 Copyright Tienda JS. </p>
+    </footer>
+
     <script src="app.js"></script>
 </body>
+
 </html>
