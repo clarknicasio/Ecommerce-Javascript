@@ -104,46 +104,6 @@ function mostrarDetalle(id) {
         });
 }
 
-/*function mostrarDetalle(id) {
-    const containerItems = document.getElementById('containerItems')
-    const itemDetalle = document.getElementById('itemDetalle')
-
-    const titleItems = document.getElementById('titleItems')   
-    titleItems.style.display = 'none'
-
-    containerItems.classList.add('hidden')
-    itemDetalle.style.display = 'block'
-
-    const cantidadInput = document.getElementById('cantidad')
-    cantidadInput.value = 1
-
-    const detalleTitle = document.getElementById('detalleTitle')
-    const detalleDescripcion = document.getElementById('detalleDescripcion')
-    const precioProducto = document.getElementById('precioProducto')
-    const stockProducto = document.getElementById('stockProducto')
-    const imgProducto = document.getElementById('imgProducto')
-
-    const producto = catalogo.find(item => item.id === id)
-
-    if (producto) {
-        detalleTitle.textContent = producto.nombre
-        detalleDescripcion.textContent = producto.descripcion
-        precioProducto.textContent = '$ ' + producto.precio
-        stockProducto.textContent = producto.stock + ' unidades disponibles'
-        imgProducto.src = 'assets/img/imagen-producto-' + producto.id + '.jpg'
-
-        detalleButtons.innerHTML = ''
-        const btnAgregarCarrito = document.createElement('button')
-        btnAgregarCarrito.type = 'button'
-        btnAgregarCarrito.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-1')
-        btnAgregarCarrito.textContent = 'Agregar al carrito'
-        btnAgregarCarrito.addEventListener('click', function () {
-            const cantidad = cantidadInput.value
-            agregarProducto(producto, cantidad)
-        })
-        detalleButtons.appendChild(btnAgregarCarrito)
-    }
-}*/
 
 function volverAProductos() {
     const containerItems = document.getElementById('containerItems')
