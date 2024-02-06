@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "iPhone 13",
+        "descripcion": "Teléfono inteligente de última generación",
+        "precio": 999.99,
+        "stock": 20,
+        "destacado": true,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 2,        
+        "nombre": "Samsung Galaxy Watch 4",
+        "descripcion": "Smartwatch con seguimiento avanzado de salud",
+        "precio": 249.99,
+        "stock": 15,
+        "destacado": false,
+        "categoria": "Smartwatches"
+    },
+    {
+        "id": 3,        
+        "nombre": "Sony WH-1000XM4",
+        "descripcion": "Auriculares con cancelación de ruido",
+        "precio": 349.99,
+        "stock": 25,
+        "destacado": true,
+        "categoria": "Auriculares"
+    },
+    {
+        "id": 4,        
+        "nombre": "SanDisk Ultra 128GB",
+        "descripcion": "Tarjeta de memoria microSDXC para almacenamiento",
+        "precio": 29.99,
+        "stock": 40,
+        "destacado": false,
+        "categoria": "Memorias"
+    },
+    {
+        "id": 5,        
+        "nombre": "Google Pixel 8",
+        "descripcion": "Teléfono con cámara avanzada y rendimiento excepcional",
+        "precio": 799.99,
+        "stock": 18,
+        "destacado": true,
+        "categoria": "Celulares"
+    },
+    {
+        "id": 6,        
+        "nombre": "Apple Watch Series 7",
+        "descripcion": "Reloj inteligente con pantalla siempre activa",
+        "precio": 349.99,
+        "stock": 22,
+        "destacado": true,
+        "categoria": "Smartwatches"
+    },
+    {
+        "id": 7,        
+        "nombre": "Bose QuietComfort Earbuds",
+        "descripcion": "Auriculares inalámbricos con sonido envolvente",
+        "precio": 279.99,
+        "stock": 20,
+        "destacado": false,
+        "categoria": "Auriculares"
+    },
+    {
+        "id": 8,        
+        "nombre": "Kingston 64GB USB 3.0",
+        "descripcion": "Memoria USB de alta velocidad",
+        "precio": 19.99,
+        "stock": 30,
+        "destacado": true,
+        "categoria": "Memorias"
+    }
+]
