@@ -20,4 +20,4 @@ E-commerce realizado en Javascript
  * Detalle del producto
  * Carrito
  * Edición del carrito (cantidades)
- * Confirmación del pedido (simulación)
+ * Confirmación del pedido con formulario
