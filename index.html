@@ -33,13 +33,32 @@
 
     <main>
         <aside>
-            <h4>Carrito</h4>
-            <div id="containerCarrito">
-            </div>         
-            <div id="lblTotal">
-            </div>               
-            <button type="button" class="btn btn-secondary btn-sm" id="btnVaciar" onclick="vaciarCarrito()" style="display:none">Vaciar carrito</button>    
-            <button type="button" class="btn btn-success btn-sm" id="btnConfirmar" onclick="confirmarPedido()" style="display:none">Confirmar pedido</button>    
+            <div id="divCheckout" style="display:none;">
+                <h4>Checkout</h4>
+                <div id="containerCheckout">
+                    <form onsubmit="confirmarPedido();return false;">
+                        <label class="mt-1 pl-1">Tu nombre</label>
+                        <input type="text" id="nombre" class="form-control mb-1" placeholder="" required>
+                        <label class="mt-1 pl-1">Tu email</label>
+                        <input type="email" id="email" class="form-control mb-1" placeholder="" required>
+                        <label class="mt-1 pl-1">Tu teléfono</label>
+                        <input type="text" id="telefono" class="form-control mb-3" placeholder="" required>                        
+                        <button type="button" class="btn btn-secondary btn-sm" id="btnCancelar" onclick="cancelarCompra()">Cancelar compra</button>    
+                        <button type="submit" class="btn btn-success btn-sm"  id="btnFinalizar">Confirmar pedido</button>            
+                    </form>
+                </div>         
+                <div id="lblCheckout">
+                </div>               
+            </div>
+            <div id="divCarrito">
+                <h4>Carrito</h4>
+                <div id="containerCarrito">
+                </div>         
+                <div id="lblTotal">
+                </div>               
+                <button type="button" class="btn btn-secondary btn-sm" id="btnVaciar" onclick="vaciarCarrito()" style="display:none">Vaciar carrito</button>    
+                <button type="button" class="btn btn-success btn-sm" id="btnConfirmar" onclick="irAlCheckout()" style="display:none">Ir al checkout</button>    
+            </div>
         </aside>
 
         <section>

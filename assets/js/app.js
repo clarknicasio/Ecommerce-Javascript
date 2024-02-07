@@ -206,6 +206,13 @@ function agregarProducto(producto, cantidad = 1) {
 }
 
 function mostrarCarrito() {
+
+    const divCheckout = document.getElementById('divCheckout')            
+    divCheckout.style.display = 'none';
+
+    const divCarrito = document.getElementById('divCarrito')            
+    divCarrito.style.display = 'block';
+
     const containerCarrito = document.getElementById('containerCarrito')
     const lblTotal = document.getElementById('lblTotal')
 
@@ -327,13 +334,50 @@ function totalCarrito() {
     return $total.toFixed(2)
 }
 
+function irAlCheckout() {
+    const divCheckout = document.getElementById('divCheckout')            
+    divCheckout.style.display = 'block'    
+
+    const divCarrito = document.getElementById('divCarrito')            
+    divCarrito.style.display = 'none'    
+}
+
 function confirmarPedido() {
     Swal.fire({
         title: "Pedido enviado",
         confirmButtonText: "Volver a la tienda",
-      }).then((result) => {
+        footer: "Muchas gracias por confiar en nosotros, nos contactaremos a la brevedad"
+    }).then((result) => {
         vaciarCarrito();
         verProductos();
+
+        const divCheckout = document.getElementById('divCheckout')            
+        divCheckout.style.display = 'none';
+
+        const divCarrito = document.getElementById('divCarrito')            
+        divCarrito.style.display = 'block';
+    });
+}
+
+function cancelarCompra() {
+    Swal.fire({
+        title: "Deseas cancelar tu compra?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sí, cancelar compra",
+        confirmButtonColor: "#dc3545",
+        cancelButtonText: "No"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            const divCheckout = document.getElementById('divCheckout')            
+            divCheckout.style.display = 'none';
+        
+            const divCarrito = document.getElementById('divCarrito')            
+            divCarrito.style.display = 'block';
+        
+            vaciarCarrito();
+            verProductos();
+        }
       });
 
 }
